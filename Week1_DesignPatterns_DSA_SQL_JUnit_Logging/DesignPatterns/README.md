@@ -21,7 +21,7 @@ A logging utility should maintain a single instance so that all modules in the a
 ```text
 SingletonPattern/
 ├── Logger.java
-├── SingletonTest.java
+├── LoggerClient.java
 └── README.md
 ```
 
