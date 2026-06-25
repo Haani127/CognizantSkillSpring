@@ -1,2 +1,0 @@
--- Exercise 1: Control Structures
--- Add your PL/SQL control structure practice here.

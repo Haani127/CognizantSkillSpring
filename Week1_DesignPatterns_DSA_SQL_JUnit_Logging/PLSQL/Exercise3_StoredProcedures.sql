@@ -1,2 +1,0 @@
--- Exercise 3: Stored Procedures
--- Add your stored procedure examples here.
