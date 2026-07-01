@@ -1,0 +1,63 @@
+# Maven
+target/
+*.jar
+*.war
+*.ear
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+logs/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.DS_Store
+
+# Build directories
+build/
+dist/
+bin/
+
+# OS
+Thumbs.db
+.DS_Store
+*.pid
+
+# Environment
+.env
+.env.local
+
+# Node (if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# SonarQube
+.sonarqube/
+
+# Test coverage
+coverage/
+*.lcov
+
+# IDE specific files
+out/
+.gradle/
