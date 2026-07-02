@@ -2,10 +2,11 @@
     "java.configuration.updateBuildConfiguration": "interactive",
     "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m -Xlog:disable",
     "java.project.sourcePaths": [
-        "Week1_DesignPatterns_DSA_SQL_JUnit_Logging/Logging/src/main/java/com/cognizant_1",
+        "Week1_DesignPatterns_DSA_SQL_JUnit_Logging/Logging/src/main/java/com/cogniz",
         "Week1_DesignPatterns_DSA_SQL_JUnit_Logging/JUnitMockito/Exercise4_AAA_Setup_Teardown",
         "Week1_DesignPatterns_DSA_SQL_JUnit_Logging/DataStructuresAlgorithms/FinancialForecasting",
         "Week1_DesignPatterns_DSA_SQL_JUnit_Logging/DataStructuresAlgorithms/EcommerceSearchFunction",
-        "Week1_DesignPatterns_DSA_SQL_JUnit_Logging/Logging/src/main/java/com/cogniz"
-    ]
+        "Week2_SpringCore_maven_jpa_hibernate/Spring Core_Maven/Dependency Injection/src/main/java/com/library"
+    ],
+    "java.compile.nullAnalysis.mode": "automatic"
 }

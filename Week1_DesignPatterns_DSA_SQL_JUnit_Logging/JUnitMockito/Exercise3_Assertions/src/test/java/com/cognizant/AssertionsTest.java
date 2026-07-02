@@ -11,7 +11,6 @@ import org.junit.jupiter.api.Test;
 class AssertionsTest {
 
     private Calculator calculator;
-
     @BeforeEach
     void setUp() {
         calculator = new Calculator();
