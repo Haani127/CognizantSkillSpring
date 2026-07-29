@@ -85,7 +85,7 @@ To ssh://altssh.gitlab.com:443/haani127/gitdemo.git
 ##### Step 5: Verify changes on GitLab
 
 
-
+https://github.com/Haani127/CognizantSkillSpring/blob/main/Week6/gitassessment5_verification.png
 
 
 
