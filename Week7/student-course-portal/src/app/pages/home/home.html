@@ -1,0 +1,40 @@
+<section class="home">
+
+  <!-- Step 11: Interpolation -->
+  <h2>Welcome to {{ portalName }}</h2>
+  <p>Manage your courses, track your progress, and stay on top of your academic journey all in one place.</p>
+
+  <!-- Step 12: Property Binding -->
+  <!-- Step 13: Event Binding -->
+  <div class="enroll-section">
+    <button [disabled]="!isPortalActive" (click)="onEnrollClick()">Enroll Now</button>
+    <p *ngIf="message" class="enroll-message">{{ message }}</p>
+  </div>
+
+  <!-- Step 14: Two-way Binding -->
+  <div class="search-section">
+    <input [(ngModel)]="searchTerm" placeholder="Search courses..." />
+    <p>Searching for: {{ searchTerm }}</p>
+  </div>
+
+  <!-- Step 61: live stats from CourseService -->
+  <div class="stats">
+    <div class="stat-card">
+      <!-- Step 61: courseCount driven by this.courseService.getCourses().length -->
+      <span class="stat-value">{{ courseCount }}</span>
+      <span class="stat-label">Courses Available</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">3</span>
+      <span class="stat-label">Enrolled</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-value">3.8</span>
+      <span class="stat-label">GPA</span>
+    </div>
+  </div>
+
+  <!-- Step 62: CourseSummaryWidget — second component sharing the same CourseService singleton -->
+  <app-course-summary-widget></app-course-summary-widget>
+
+</section>

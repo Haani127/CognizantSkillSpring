@@ -1,0 +1,83 @@
+<section class="add-course-container">
+  <h2>Add New Course</h2>
+  <p>Fill out the details below to create a new course.</p>
+
+  <div *ngIf="successMessage" class="alert alert-success">
+    {{ successMessage }}
+  </div>
+
+  <div *ngIf="errorMessage" class="alert alert-danger">
+    {{ errorMessage }}
+  </div>
+
+  <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" class="course-form">
+    <div class="form-group">
+      <label for="name">Course Name *</label>
+      <input
+        id="name"
+        type="text"
+        formControlName="name"
+        placeholder="e.g., Advanced Java Programming"
+        class="form-control"
+      />
+      <div *ngIf="courseForm.get('name')?.invalid && courseForm.get('name')?.touched" class="field-error">
+        <small *ngIf="courseForm.get('name')?.errors?.['required']">Course name is required.</small>
+        <small *ngIf="courseForm.get('name')?.errors?.['minlength']">Course name must be at least 3 characters long.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="code">Course Code * (e.g., JAV101)</label>
+      <input
+        id="code"
+        type="text"
+        formControlName="code"
+        placeholder="e.g., JAV101"
+        class="form-control"
+      />
+      <div *ngIf="courseForm.get('code')?.invalid && courseForm.get('code')?.touched" class="field-error">
+        <small *ngIf="courseForm.get('code')?.errors?.['required']">Course code is required.</small>
+        <small *ngIf="courseForm.get('code')?.errors?.['pattern']">Format must be 3 uppercase letters followed by 3 numbers (e.g. JAV101).</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="credits">Credits * (1 - 6)</label>
+      <input
+        id="credits"
+        type="number"
+        formControlName="credits"
+        min="1"
+        max="6"
+        class="form-control"
+      />
+      <div *ngIf="courseForm.get('credits')?.invalid && courseForm.get('credits')?.touched" class="field-error">
+        <small *ngIf="courseForm.get('credits')?.errors?.['required']">Credits are required.</small>
+        <small *ngIf="courseForm.get('credits')?.errors?.['min'] || courseForm.get('credits')?.errors?.['max']">Credits must be between 1 and 6.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="gradeStatus">Initial Grade Status</label>
+      <select id="gradeStatus" formControlName="gradeStatus" class="form-control">
+        <option value="pending">Pending</option>
+        <option value="passed">Passed</option>
+        <option value="failed">Failed</option>
+      </select>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <label>
+        <input type="checkbox" formControlName="enrolled" />
+        Open for Immediate Enrollment
+      </label>
+    </div>
+
+    <div class="form-actions">
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Cancel</button>
+      <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+        {{ isSubmitting ? 'Saving...' : 'Add Course' }}
+      </button>
+    </div>
+  </form>
+</section>
